@@ -10,17 +10,17 @@
 <body>
 
     <header class="header">
-     <a class="main-heder-logo"><img src="img/index-logo.svg" alt="Логотип "Бородинский""></a>
+     <a class="main-heder-logo"><img src="img/index-logo.svg" width="371" height="155" alt="Логотип "Бородинский""></a>
       <nav class="nav-site">
         <ul class="nav-site-a">
           <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
           <li><a href="news.html">НОВОСТИ</a></li>
           <li><a href="price.html">ПРАЙС-ЛИСТ</a></li>
-          <li><a href="catalog.html">МАГАЗИН</a></li>
+          <li><a href="shop.html">МАГАЗИН</a></li>
           <li><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
         <ul class="nav-site-login">
-          <a href="login.html">ВХОД</a>
+          <li><a href="login.html">ВХОД</a></li>
         </ul>
       </nav>
     </header>
@@ -57,12 +57,16 @@
         </ul>
         <a class="button" href="news.html">ВСЕ НОВОСТИ</a>
       </section>
-      <section class="photo">
+      <section class="gallery">
         <h2>ФОТОГАЛЕРЕЯ</h2>
-        <a href="#"><img src="img/studio.jpg" alt="ФОТО"></a>
-        <button class="button" type="button">НАЗАД</button>
-        <button class="button" type="button">ВПЕРЕД</button>
+        <figure>
+        <a href="#"><img src="img/interier-photo.jpg" alt="ФОТО" width="286" height="164"></a><p>Фото интерьера</p>
+        </figure>
+        <button class="button button-gallery button-gallery-back" type="button">НАЗАД</button>
+        <button class="button button-gallery button-gallery-next" type="button">ВПЕРЕД</button>
+
       </section>
+
       <section class="contacts">
        <h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
        <p>БАРБЕРШОП «БОРОДИНСКИЙ»</p>
@@ -74,15 +78,30 @@
        <a class="button" href="map.html">КАК ПРОЕХАТЬ</a>
        <a class="button" href="contacts.html">ОБРАТНАЯ СВЯЗЬ</a>
       </section>
+
       <section class="enroll">
         <h2>ЗАПИСАТЬСЯ</h2>
-        <p class="enroll-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-        <!--Тут будет форма-->
-        <p>Дата</p>
-        <p>Время</p>
-        <p>Ваше имя</p>
-        <p>Телефон</p>
-        <button class="button" type="submit">ОТПРАВИТЬ</button>
+        <p class="enroll-info">Укажите желаемую дату и время и мы свяжемся с Вами для подтверждения брони</p>
+        <form class="enroll-form" action="#" method="post">
+          <label class="label-input">
+            Дата
+            <input class="input" type="text" name="date" class="input" placeholder="08.10.2017">
+          </label>
+          <label class="label-input">
+            Время
+            <input class="input" type="text" name="time"  placeholder="10.00">
+          </label>
+          <label class="label-input">
+            Ваше имя
+            <input class="input" type="text" name="name" placeholder="Борода">
+          </label>
+          <label class="label-input">
+            Телефон
+            <input class="input" type="tel" name="tel" placeholder="+7 123 456-78-90">
+          </label>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+
       </section>
     </main>
 
@@ -106,16 +125,34 @@
       </div>
     </footer>
 
-     <section class="modal modal-login">
+    <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <p>Введите пожалуйста свой логин и пароль</p>
+      <form class="login-form" action="#" type="post">
+        <p>
+          <input type="text" name="login" placeholder="Логин" aria-label="Логин">
+        </p>
+        <p>
+          <input type="password" name="password" placeholder="Пароль" aria-label="Пароль">
+        </p>
+        <p>
+          <label class="login-checkbox">
+            <input type="radio" name="remember" cheked>
+            Запомните меня!
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>        
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" aria-label="Закрыть окно входа">x</button>>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/background-map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-петербург">
+      </p>
+      <span class="modal-close" aria-label="Закрыть окно входа">x</span>
     </section>
 </body>
 </html>

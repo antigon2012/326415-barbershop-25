@@ -9,7 +9,7 @@
   <header class="header">
       <nav class="main-nav">
         <ul class="site-nav">
-          <li><a class="heder-logo" href="index.html"><img src="img/index-logo.svg" alt="Логотип "Бородинский""></a></li>
+          <li><a class="heder-logo" href="index.html"><img src="img/logo.svg" width="111" height="24" alt="Логотип "Бородинский""></a></li>
           <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
           <li><a href="news.html">НОВОСТИ</a></li>
           <li><a href="price.html">ПРАЙС-ЛИСТ</a></li>
@@ -36,11 +36,11 @@
 
       <section class="product-photos">
         <h2 class="visually-hidden">Галерея товара</h2>
-        <p class="product-photo-full"><img src="#" alt="Фото товара 1"></p>
+        <p class="product-photo-full"><img src="img/travel-kit-full.jpg" width="460" height="498" alt="Фото товара 1"></p>
         <ul class="gallery-item-list">
-          <li class="product-small-1"><a href=""><img src="#" alt="Фото товара 2"></a></li>
-          <li class="product-small-2"><a href=""><img src="#" alt="Фото товара 3"></a></li>
-          <li class="product-small-3"><a href=""><img src="#" alt="Фото товара 3"></a></li>
+          <li class="product-small-1"><a href="#"><img src="img/travel-kit-small1.jpg" width="140" height="149" alt="Фото товара 2"></a></li>
+          <li class="product-small-2"><a href="#"><img src="img/travel-kit-small-2.jpg" width="140" height="149" alt="Фото товара 3"></a></li>
+          <li class="product-small-3"><a href="#"><img src="img/travel-kit-small-3.jpg" width="140" height="149" alt="Фото товара 3"></a></li>
         </ul>
 
       </section>
@@ -88,14 +88,32 @@
 
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
-    </section>
+      <p>Введите пожалуйста свой логин и пароль</p>
+      <form class="login-form" action="#" type="post">
+        <p>
+          <input type="text" name="login" placeholder="Логин" aria-label="Логин">
+        </p>
+        <p>
+          <input type="password" name="password" placeholder="Пароль" aria-label="Пароль">
+        </p>
+        <p>
+          <label class="login-checkbox">
+            <input type="radio" name="remember" cheked>
+            Запомните меня!
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>        
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" aria-label="Закрыть окно входа">x</button>>
+    </section>s
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/background-map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-петербург">
+      </p>
+      <span class="modal-close" aria-label="Закрыть окно входа">x</span>
     </section>
 
 </body>
